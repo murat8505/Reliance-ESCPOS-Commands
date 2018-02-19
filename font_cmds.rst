@@ -467,15 +467,17 @@ This section describes all commands that affect how and which font is rendered.
    :Format:
         ``Hex       $1C $7D $26  xL xH``  
 
-        ``ASCII     FS   }   &  xL xH``  
+        ``ASCII     FS    }   &  xL xH``  
         
-        ``Decimal   28  125   xL xH``  
+        ``Decimal   28  125  36  xL xH``  
 
    :Range: ``0 ≤ xL + (xH * 256) ≤ 65535``
 
    :Default: Default codepage is set with PC tools
    :Notes:
-       - If the codepage sent to the printer is not installed, the currently active codepage will not change.       
+       - Codepage = (xL + (xH * 256))
+       - If the codepage sent to the printer is not installed, the currently active codepage will not change. 
+       - See "Command Table Layout" section for more information on two byte number definitions.      
 
    :Related: :ref:`Select Codepage<1b74>`
    :Example: ``None`` 
