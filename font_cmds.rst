@@ -477,7 +477,7 @@ This section describes all commands that affect how and which font is rendered.
    :Notes:
        - Codepage = (xL + (xH * 256))
        - If the codepage sent to the printer is not installed, the currently active codepage will not change. 
-       - See "Command Table Layout" section for more information on two byte number definitions.      
+       - See :ref:`Two Byte Numbers<2byte>` section for more information on two byte number definitions.      
 
    :Related: :ref:`Select Codepage<1b74>`
    :Example Select Codapge 437:
