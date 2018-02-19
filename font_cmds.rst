@@ -480,7 +480,16 @@ This section describes all commands that affect how and which font is rendered.
        - See "Command Table Layout" section for more information on two byte number definitions.      
 
    :Related: :ref:`Select Codepage<1b74>`
-   :Example: ``None`` 
+   :Example Select Codapge 437:
+        .. code-block:: none
+
+            write('\x1c\x7d\x26\xb5\x01')   #  Select codepage 437
+
+   :Example Select Codapge 1252:
+        .. code-block:: none
+
+            write('\x1c\x7d\x26\xe4\x04')   #  Select codepage 1252
+        
 
 
 ----
