@@ -449,7 +449,40 @@ This section describes all commands that affect how and which font is rendered.
    :Related: :ref:`Select Print Mode<1b21>`
    :Example: ``None``        
 
-----     
+----
+
+
+.. raw:: latex
+
+    \clearpage
+
+.. _1c7d26:
+.. index:: $1C $7D $26 - Select Codepage
+
+.. py:attribute:: Select Codepage - $1C $7D $26
+    
+    Used to select any installed codepage as the active codepage. Using Two Byte Number Definitions, send the integer number
+    of the codepage. For example, if codepage 437 is desired, then send the integer 437.
+
+   :Format:
+        ``Hex       $1C $7D $26  xL xH``  
+
+        ``ASCII     FS   }   &  xL xH``  
+        
+        ``Decimal   28  125   xL xH``  
+
+   :Range: ``0 ≤ xL + (xH * 256) ≤ 65535``
+
+   :Default: Default codepage is set with PC tools
+   :Notes:
+       - If the codepage sent to the printer is not installed, the currently active codepage will not change.       
+
+   :Related: :ref:`Select Codepage<1b74>`
+   :Example: ``None`` 
+
+
+----
+
 
 .. raw:: latex
 
@@ -557,4 +590,7 @@ This section describes all commands that affect how and which font is rendered.
           - Underline will stay enabled but no be applied if this setting is enabled.        
 
    :Related: ``None``
-   :Example: ``None``           
+   :Example: ``None`` 
+
+----
+
